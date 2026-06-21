@@ -12,7 +12,7 @@ class GestorTarefas(Agent):
         self.robos = robos
         self.monitor = monitor or Monitoramento()
 
-        # Dicionário robusto para evitar concorrência entre tarefas
+        # Dicionário para evitar concorrência entre tarefas
         self.propostas_por_tarefa = {}
         
         self.tarefas_em_execucao = []
