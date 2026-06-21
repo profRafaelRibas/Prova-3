@@ -1,10 +1,3 @@
-Aqui está um modelo de arquivo **`README.md`** técnico e estruturado para o seu projeto, contendo a explicação do cenário, os agentes envolvidos e as instruções necessárias de instalação e execução.
-
----
-
-### Código para o arquivo `README.md`
-
-```markdown
 # Armazém Autônomo com Protocolo Contract-Net (MASPY)
 
 Este projeto implementa um Sistema Multiagente (SMA) utilizando a biblioteca **MASPY** (Multi-Agent System for Python) para simular o gerenciamento inteligente e autônomo de entregas em um armazém. A distribuição de tarefas é baseada no protocolo de negociação **Contract-Net**, onde agentes robôs competem por contratos de entrega de pacotes de acordo com suas condições físicas (distância e bateria).

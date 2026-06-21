@@ -1,5 +1,11 @@
 # Descrição Técnica do Trabalho: Armazém Autônomo e Protocolo Contract-Net no MASPY
 
+## Alunos: Anderson, Charles e Rafael
+
+## Disciplina: Inteligência Artificial
+
+## Professor: Dr. André Pinz Borges
+
 ## 1. Descrição do Cenário
 O projeto simula um **Armazém Autônomo** composto por uma grade física bidimensional de $10 \times 10$ posições (coordenadas de $0$ a $9$). No início do dia, o ambiente (`Armazem`) gera um conjunto de tarefas pendentes. Cada tarefa representa um pacote que possui um identificador único, uma coordenada geográfica de origem (onde o pacote está localizado) e uma coordenada geográfica de destino (onde ele deve ser entregue). 
 
