@@ -1,6 +1,3 @@
-# gestor.py — Gestor de Tarefas e Coordenador do Contract-Net (Sem RL)
-# =====================================================================
-
 from maspy import *
 from utils import log_agente, Monitoramento
 from time import time

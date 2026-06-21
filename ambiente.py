@@ -1,17 +1,14 @@
 from maspy import *
-from random import randint, choice
-
+from random import randint
 
 class Armazem(Environment):
 
     def __init__(self, env_name="Armazem"):
         super().__init__(env_name)
-
         # Grade física 10x10 (coordenadas de 0 a 9)
         self.linhas, self.colunas = (10, 10)
         self.num_tarefas = 5
         self.pacotes = []
-
         # Gerar as tarefas/pacotes da simulação
         for i in range(1, self.num_tarefas + 1):
             origem = (randint(0, self.linhas - 1), randint(0, self.colunas - 1))
@@ -19,7 +16,6 @@ class Armazem(Environment):
                 destino = (randint(0, self.linhas - 1), randint(0, self.colunas - 1))
                 if destino != origem:
                     break
-
             pacote = {
                 "id": i,
                 "origem": origem,

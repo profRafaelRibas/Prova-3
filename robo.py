@@ -1,6 +1,3 @@
-# robo.py — Robô Entregador Autônomo (Sem RL)
-# =====================================================================
-
 from maspy import *
 from utils import log_agente, calcular_distancia
 import random
@@ -47,7 +44,7 @@ class RoboEntregador(Agent):
         log_agente(self.my_name, f"Proposta enviada p/ tarefa {dados_tarefa['id']} (custo={custo:.2f})")
 
     # =====================================================================
-    # Cálculo de Custo (Distância física + Desgaste de Bateria)
+    # Cálculo de custo (distância física + desgaste de bateria)
     # =====================================================================
     def calcular_custo_proposta(self, tarefa):
         (tx, ty) = tarefa["origem"]
@@ -72,7 +69,7 @@ class RoboEntregador(Agent):
         log_agente(self.my_name, f"Perdi a concorrência pela tarefa {tarefa_id}.", cor="branco")
 
     # =====================================================================
-    # Plano BDI Principal: Executar a Entrega
+    # Plano BDI principal: Executar a entrega
     # =====================================================================
     @pl(gain, Goal("executar_tarefa", Any))
     def executar_tarefa(self, src, tarefa):
@@ -107,7 +104,7 @@ class RoboEntregador(Agent):
         # Linha self.rm(...) removida para evitar KeyError decorrente de mutação de dados da tarefa.
 
     # =====================================================================
-    # Movimentação Passo a Passo
+    # Movimentação passo a passo
     # =====================================================================
     def mover_ate(self, destino):
         while self.posicao != destino and self.bateria > 0:
@@ -133,7 +130,7 @@ class RoboEntregador(Agent):
             log_agente(self.my_name, f"Movendo-se ({direcao}) → {self.posicao} | Bat={self.bateria}%", cor="branco")
 
     # =====================================================================
-    # Coleta e Entrega físicas no ambiente
+    # Coleta e entrega físicas no ambiente
     # =====================================================================
     def coletar_pacote(self, tarefa_id):
         log_agente(self.my_name, f"Efetuando coleta do pacote {tarefa_id}...", cor="amarelo")

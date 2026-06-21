@@ -1,19 +1,13 @@
-# utils.py — Recursos Utilitários e Monitor de Métricas (Sem RL)
-# =====================================================================
-
 import math
 from colorama import Fore, Style
-
 
 def calcular_distancia(p1, p2):
     # Distância Euclidiana básica
     return round(math.dist(p1, p2), 2)
 
-
 def consumo_bateria(distancia, fator_consumo=0.8):
     # Consumo estimado de bateria
     return int(distancia * fator_consumo)
-
 
 def log_agente(nome, msg, cor="azul"):
     # Formatação de cores no terminal de acordo com o papel do agente
@@ -28,7 +22,6 @@ def log_agente(nome, msg, cor="azul"):
     }
     cor_final = cores.get(cor, Fore.WHITE)
     print(f"{cor_final}[{nome}] {msg}{Style.RESET_ALL}")
-
 
 class Monitoramento:
     def __init__(self):
@@ -53,7 +46,7 @@ class Monitoramento:
 
     def resumo(self):
         print("\n" + "-" * 40)
-        print("          MÉTRICAS DO MONITOR")
+        print(" MÉTRICAS DO MONITOR")
         print("-" * 40)
         print(f"Entregas efetuadas: {self.tarefas_concluidas}/{self.tarefas_total}")
         
